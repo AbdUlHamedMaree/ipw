@@ -1,16 +1,19 @@
 ---
 import '../styles/global.css';
+
+const locale = Astro.currentLocale ?? 'ar';
+const dir = locale === 'ar' ? 'rtl' : 'ltr';
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang={locale} dir={dir}>
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <link rel='icon' href='/favicon.ico' />
     <meta name='generator' content={Astro.generator} />
-    <title>Astro Basics</title>
+    <title>IPW | Services & Products</title>
   </head>
   <body>
     <slot />

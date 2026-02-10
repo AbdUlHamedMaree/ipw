@@ -16,6 +16,9 @@ const scriptFiles = ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'];
 
 export default defineConfig([
   {
+    ignores: ['dist', 'node_modules', '.astro'],
+  },
+  {
     files: scriptFiles,
     plugins: { js },
     extends: ['js/recommended'],
